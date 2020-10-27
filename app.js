@@ -86,15 +86,41 @@ html.addEventListener("mouseleave",function(){
 	this.style.color = "";
 });
 
+// 要素の追加
+// 親要素の取得
+let parent_text = document.querySelector("#text");
 
+// pタグを生成
+let child_p = document.createElement("p");
 
+// タグ内で表示される文字を設定
+child_p.textContent = "ふが";
 
+// 親要素に生成したpタグを追加
+// 親要素.appendChild(追加したいタグの要素);
+// どんどん下に追加される
+parent_text.appendChild(child_p);
 
+// pタグを生成
+let child_p_moge = document.createElement("p");
+// タグ内で表示される文字を設定
+child_p_moge.textContent = "もげ";
 
+// ふがの上にもげを追加する
+// 親要素.insertBefore(追加したい要素,その手前に追加したい対象の要素);
+parent_text.insertBefore(child_p_moge,child_p);
 
+// 要素の削除
+// 削除したい要素.remove();
+// let ant = document.querySelector("#ant");
+// ant.remove();
 
-
-
+// 削除したい要素が含まれている親要素.removeChild(削除したい要素);
+let room = document.querySelector("#room");
+// roomの一番最初の子要素を削除
+// room.removeChild(room.firstElementChild);
+// ゴキブリを削除する
+room.removeChild(document.querySelector("#cockroach"));
 
 
 
