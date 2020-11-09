@@ -110,6 +110,18 @@ child_p_moge.textContent = "もげ";
 // 親要素.insertBefore(追加したい要素,その手前に追加したい対象の要素);
 parent_text.insertBefore(child_p_moge,child_p);
 
+// 要素を色々設定できる
+// 押したボタンの文字を、id=textの中に追加する
+function btna_click(){
+	let parent_text = document.querySelector("#text");
+// 追加するpタグを生成
+let child_p_for_btn = document.createElement("p");
+child_p_for_btn.textContent = document.querySelector("#btnA").textContent;
+child_p_for_btn.id = "add_id";
+child_p_for_btn.style.color = "blue";
+parent_text.appendChild(child_p_for_btn);
+}
+
 // 要素の削除
 // 削除したい要素.remove();
 // let ant = document.querySelector("#ant");
